@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <base href="https://www.w3schools.com/" target="_blank">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <title>My Page Title</title>
+  <link rel="icon" type="image/x-icon" href="/images/akbar.jpeg">
+
+  <style>
+
+#myHeader {
+  background-color: lightblue;
+  color: black;
+  padding: 40px;
+  text-align: center;
+}
+
+    .city {
+      /* background-color: tomato;
+  color: white;
+  border: 2px solid black; */
+      margin: 20px;
+      padding: 20px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #D6EEEE;
+    }
+
+    body {
+      background-color: rebeccapurple;
+    }
+
+    h1 {
+      color:black;
+    }
+
+    table,
+    td,
+    th {
+
+      border: 1px solid black;
+      border-collapse: collapse;
+      text-align: right;
+
+    }
+
+    pre {
+      font-size: 20px;
+      color: black;
+    }
+  </style>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body style="background-color: white;">
+
+  <p>Click the button to get your coordinates.</p>
+
+  <button onclick="getLocation()">Try It</button>
+  
+  <p id="demo"></p>
+  
+  <script>
+  var x = document.getElementById("demo");
+  
+  function getLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition, showError);
+    } else { 
+      x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+  }
+  
+  function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude;
+  }
+  
+  function showError(error) {
+    switch(error.code) {
+      case error.PERMISSION_DENIED:
+        x.innerHTML = "User denied the request for Geolocation."
+        break;
+      case error.POSITION_UNAVAILABLE:
+        x.innerHTML = "Location information is unavailable."
+        break;
+      case error.TIMEOUT:
+        x.innerHTML = "The request to get user location timed out."
+        break;
+      case error.UNKNOWN_ERROR:
+        x.innerHTML = "An unknown error occurred."
+        break;
+    }
+  }
+  </script>
+  
+
+
+
+  <svg width="300" height="200">
+    <polygon points="100,10 40,198 190,78 10,78 160,198"
+    style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
+  </svg>
+
+  <svg height="130" width="500">
+    <defs>
+      <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%"
+        style="stop-color:rgb(255,255,0);stop-opacity:1" />
+        <stop offset="100%"
+        style="stop-color:rgb(255,0,0);stop-opacity:1" />
+      </linearGradient>
+    </defs>
+    <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+    <text fill="#ffffff" font-size="45" font-family="Verdana"
+    x="50" y="86">Akbar</text>
+  Sorry, your browser does not support inline SVG.
+  </svg>
+  
+  
+<h1>HTML Entity Example &hearts;</h1>
+
+<p>&#128512;</p>
+
+<h2>The Rupee sign: &#8377;</h2>
+  <svg width="100" height="100">
+    <circle cx="50" cy="50" r="30"
+    stroke="green" stroke-width="4" fill="yellow" />
+  Sorry, your browser does not support inline SVG.
+  </svg>
+  <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+  </canvas>
+  <script>
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.moveTo(0, 0);
+    ctx.lineTo(200, 100);
+    ctx.stroke();
+    </script>
+
+<h1>Akbar</h1>
+
+  <!-- <video width="320" height="240" controls>
+    <source src="movie1.mp4" type="video/mp4">
+    <source src="movie1.ogg" type="video/ogg">
+  </video> -->
+  <p>Open from <time>10:00</time> to <time>21:00</time> every weekday.</p>
+
+  <p> Hi,I have a date on <time datetime="2008-02-14 20:00">Valentines day</time>.</p>
+  Definition 
+  <p>To learn AJAX,To learn AJAX,To learn AJAX,To learn AJAX,To learn AJAX,To learn AJAX,To learn AJAX,To learn AJAX,To learn AJAX,To learn AJAX,To learn AJAX,To learn AJAX, you must be familiar with the XML<wbr>Http<wbr>Request Object.</p>
+  <nav>
+    <a href="/html/">HTML</a> |
+    <a href="/css/">CSS</a> |
+    <a href="/js/">JavaScript</a> |
+    <a href="/python/">Python</a>
+  </nav>
+  
+
+  <label for="cars">Choose a car:</label>
+  <select id="cars" name="cars">
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi">Audi</option>
+  </select>
+  <form>
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname">
+  </form>
+  <div class="city">
+    <h2>London</h2>
+    <p>London is the capital of England.</p>
+  </div>
+
+  <div class="city">
+    <h2>Paris</h2>
+    <p>Paris is the capital of France.</p>
+  </div>
+
+
+  <iframe src="http://127.0.0.1:5500/js/a.html" title="description"></iframe>
+  <iframe src="url" title="description"></iframe>
+  <a href="url">link text</a>
+  <a href="https://www.w3schools.com/" target="_blank">Visit W3Schools!</a>
+  <a href="https://www.tupaki.com/" target="self">Visit tupaki!</a>
+  <a href="https://www.google.com/" target="_parent">Visit google!</a>
+  <a href="https://www.javatpoint.com/" target="_top">Visit javatpoint!</a>
+
+
+  <h1 style="color:blue;">A Blue Heading</h1>
+
+  <p style="color:rgb(17, 16, 16);">A red paragraph.</p>
+
+  <h1 style="background-color:rgb(255, 99, 71);">One</h1>
+  <h1 style="background-color:hsl(9, 100%, 64%);">two</h1>
+  <h1 style="background-color:rgba(255, 99, 71, 0.5);">three</h1>
+  <h1 style="background-color:hsla(9, 100%, 64%, 0.5);">Four</h1>
+  <h1 style="background-color:#ff6347;">Five</h1>
+
+
+  <b>This text is bold</b>
+
+  <strong>This text is important!</strong>
+  <i>This text is italic</i>
+
+  <pre>
+
+    My Bonnie lies over the ocean.
+  
+    My Bonnie lies over the sea.
+  
+    My Bonnie lies over the ocean.
+  
+    Oh, bring back my Bonnie to me.
+  </pre>
+
+  <h1>oye <strong>me</strong> </h1>
+  <h1>This <br> is heading 1</h1>
+  <p>This<mark> is some </mark>text.</p>
+  <p>This<ins> is some <ins>text.</p>
+  <p>This<del> is some </del>text.</p>
+  <p>This<small> is some </small>text.</p>
+  <p>This<em> is some emphasized text </em>text.</p>
+  <hr>
+  <h2>This is heading 2</h2>
+  <p>This is some other text.</p>
+  <hr>
+
+  <p>Akbar shaik</p>
+  <address>
+    Written by John Doe.<br>
+    Visit us at:<br>
+    Example.com<br>
+    Box 564, Disneyland<br>
+    USA
+  </address>
+  <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+  <p>WWF's goal is to: <q>Build a future where people live in harmony with nature.</q></p>
+  <table>
+    <tr>
+      <th> Roll No. </th>
+      <th> Student Name </th>
+      <th> Subject Name </th>
+      <!-- <th> marks </th> -->
+    </tr>
+    <tr>
+      <td> 1 </td>
+      <td>Ram</td>
+      <td> Physics </td>
+    </tr>
+    <tr>
+      <td> 2 </td>
+      <td> Shyam </td>
+      <td> Math </td>
+    </tr>
+    <tr>
+      <td> 3 </td>
+      <td> Murli </td>
+      <td> Chemistry </td>
+    </tr>
+  </table>
+  <a href="https://www.w3schools.com">Visit W3Schools</a>
+  <p>
+    This paragraph
+    contains a lot of lines
+    in the source code,
+    but the browser
+    ignores it.
+  </p>
+  <h1 id="myHeader">My Only Header</h1>
+  <bdo dir="rtl">This text will be written from right to left</bdo>
+
+
+  <a href="b.html">Next</a>
+  <img src="images/akbar.jpg" alt="akbar image">
+
+  <ul>
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+  </ul>
+  <table>
+    <colgroup>
+      <col span="2" style="background-color: #D6EEEE">
+    </colgroup>
+    <tr>
+      <th colspan="2">Name</th>
+      <th>Age</th>
+    </tr>
+    <tr>
+      <td>Jill</td>
+      <td>Smith</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td>Eve</td>
+      <td>Jackson</td>
+      <td>94</td>
+    </tr>
+  </table>
+
+
+</body>
+
+</html>
